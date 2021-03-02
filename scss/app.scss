@@ -24,6 +24,8 @@ body{
   .album-container{
     display: $flex;
     flex-wrap: wrap;
+    width: 1000px;
+    margin: 0 auto;
 
     .albums{
       width: calc(100% / 3 - 60px);
