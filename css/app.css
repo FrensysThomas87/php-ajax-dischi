@@ -25,6 +25,13 @@ body {
   width: calc(100% / 3 - 60px);
   background-color: #000;
   margin: 15px 30px;
+  padding: 15px;
+}
+.container .album-container .albums .album-cover-container {
+  width: 100%;
+}
+.container .album-container .albums .album-cover-container > img {
+  width: 100%;
 }
 .container .album-container .albums h1 {
   color: #fff;
