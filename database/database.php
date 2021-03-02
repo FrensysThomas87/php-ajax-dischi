@@ -38,7 +38,7 @@ $disks = [
   [
     'title' => 'Blonde on Blonde',
     'author' => 'Bob Dylan',
-    'year' => '1959',
+    'year' => '1966',
     'cover' => 'img/bob-dylan.jpg',
     'genre' => 'Rock'
   ],
