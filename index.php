@@ -8,6 +8,7 @@
    <head>
      <meta charset="utf-8">
      <title>Php ajax dischi</title>
+     <link rel="stylesheet" href="css/app.css">
    </head>
    <body>
      <?php foreach ($disks as $disk): ?>
