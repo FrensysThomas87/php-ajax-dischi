@@ -11,15 +11,23 @@
      <link rel="stylesheet" href="css/app.css">
    </head>
    <body>
-     <?php foreach ($disks as $disk): ?>
-       <hr>
 
-       <div class="">
-         <h1><?php echo $disk['title'] ?></h1>
-         <h2><?php echo $disk['author'] ?></h2>
-         <h3><?php echo $disk['year'] ?></h3>
-       </div>
 
-     <?php endforeach; ?>
+
+       <div class="container">
+
+        <div class="album-container">
+          <?php foreach ($disks as $disk): ?>
+          <div class="albums">
+            <h1><?php echo $disk['title'] ?></h1>
+            <h2><?php echo $disk['author'] ?></h2>
+            <h3><?php echo $disk['year'] ?></h3>
+          </div>
+        <?php endforeach; ?>
+        </div>
+
+      </div>
+
+
    </body>
  </html>

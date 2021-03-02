@@ -1,1 +1,37 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #1E2D3B;
+  min-width: 1600px;
+}
+
+.container {
+  width: 1600px;
+  min-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #191919;
+  padding: 40px 20px;
+}
+.container .album-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .album-container .albums {
+  width: calc(100% / 3 - 60px);
+  background-color: #000;
+  margin: 15px 30px;
+}
+.container .album-container .albums h1 {
+  color: #fff;
+}
+.container .album-container .albums h2 {
+  color: #696969;
+}
+.container .album-container .albums h3 {
+  color: #909090;
+}
