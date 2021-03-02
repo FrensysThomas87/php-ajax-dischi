@@ -23,7 +23,7 @@ body{
   background-color: $containerColor;
   padding-bottom: 60px;
 
-
+// header
   header{
     height: 80px;
     background-color: $albumsColor;
@@ -39,13 +39,11 @@ body{
         position: absolute;
         left: 0;
       }
-
     }
-
-
   }
+  // End header
 
-
+// albums
   .album-container{
     display: $flex;
     flex-wrap: wrap;
@@ -80,4 +78,6 @@ body{
       }
     }
   }
+
+  // end albums
 }

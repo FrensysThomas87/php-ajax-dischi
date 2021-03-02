@@ -12,12 +12,15 @@
    </head>
    <body>
      <div class="container">
+       <!-- header -->
        <header>
          <div class="header-container">
            <img src="img/spotify.jpg" alt="">
          </div>
-
        </header>
+       <!-- end header -->
+
+       <!-- albums -->
        <div class="album-container">
           <?php foreach ($disks as $disk): ?>
           <div class="albums">
@@ -30,6 +33,7 @@
           </div>
         <?php endforeach; ?>
         </div>
+        <!-- end albums -->
 
       </div>
 
