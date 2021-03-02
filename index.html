@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    
+
     <div id="app">
       <div class="container">
         <!-- header -->
-        <header>
+        <header @mouseOver="fillByGenre()">
           <div class="header-container">
             <img src="img/spotify.jpg" alt="">
+            <select class="" name="">
+              <option value="">ALL</option>
+              <option v-for="element in genres">{{element}}</option>
+            </select>
           </div>
         </header>
         <!--end header -->
-        
+
         <!-- albums -->
         <div class="album-container">
           <div v-for="element in dischi" class="albums">
@@ -33,7 +37,7 @@
          <!-- end albums -->
        </div>
     </div>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

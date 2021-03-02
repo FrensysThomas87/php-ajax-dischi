@@ -3,6 +3,19 @@ new Vue({
  data:{
 
    dischi:[],
+   genres:[],
+
+ },
+
+ methods:{
+   fillByGenre:function(){
+     this.dischi.forEach((element) => {
+       if(!this.genres.includes(element.genre)){
+         this.genres.push(element.genre);
+       }
+     });
+
+   },
  },
 
  mounted(){
