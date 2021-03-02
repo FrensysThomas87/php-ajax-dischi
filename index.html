@@ -10,7 +10,26 @@
   <body>
     
     <div id="app">
-      
+      <div class="container">
+        <header>
+          <div class="header-container">
+            <img src="img/spotify.jpg" alt="">
+          </div>
+        </header>
+        
+        <div class="album-container">
+          <div v-for="element in dischi" class="albums">
+             <div class="album-cover-container">
+               <img :src="element.cover" alt="">
+             </div>
+             <h1>{{element.title}}</h1>
+             <h2>{{element.author}}</h2>
+             <h3>{{element.year}}</h3>
+           </div>
+         
+         </div>
+ 
+       </div>
     </div>
     
     <script src="js/script.js" charset="utf-8"></script>

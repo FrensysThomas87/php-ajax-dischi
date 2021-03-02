@@ -33,16 +33,16 @@ $disks = [
 
   [
     'title' => 'Blonde on Blonde',
-    'author' => 'Miles Davis',
+    'author' => 'Bob Dylan',
     'year' => '1959',
-    'cover' => 'img/miles-davis.jfif'
+    'cover' => 'img/bob-dylan.jpg'
   ],
 
   [
     'title' => 'Kind Of Blue',
-    'author' => 'Pink Floyd',
-    'year' => '1973',
-    'cover' => 'img/pink-floyd.png'
+    'author' => 'Miles Davis',
+    'year' => '1959',
+    'cover' => 'img/miles-davis.jfif'
   ],
 
   [
