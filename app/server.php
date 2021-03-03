@@ -11,19 +11,17 @@ function filterByGenre($originalArray, $genere){
   $filtered = [];
   foreach ($originalArray as $album) {
     if($album['genre'] === $genere  ){
-      $filtered[] = $album['genre'];
+      $filtered[] = $album;
     }
 
-    return $filtered;
   }
-
+  return $filtered;
 }
 
 
 if(!empty($genreQuery)){
   $disks = filterByGenre($disks, $genreQuery);
+}
 
-}else{
   $json = json_encode($disks);
   echo $json;
-}
