@@ -13,12 +13,9 @@ header('Content-Type: application/json');
 
 
 // Se il valore in $_GET non è vuoto chiamo la funziona che filtra per genere
-if(!empty($_GET['genre'])){
-  if(array_key_exists('genre', $_GET)){
-    $disks = filterByGenre($disks, $_GET['genre']);
+if(!empty($_GET['genre']) && array_key_exists('genre', $_GET) ){
+  $disks = filterByGenre($disks, $_GET['genre']);
     checkGet( $_GET['genre']);
-  }
-
 }
 
 
