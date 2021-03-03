@@ -44,6 +44,7 @@ new Vue({
 
  mounted(){
    const self = this;
+   this.badRequest = false;
    axios.get('http://localhost/php-ajax-dischi/app/server.php')
    .then(function(resp){
      self.dischi = resp.data;

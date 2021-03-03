@@ -7,17 +7,21 @@
 header('Content-Type: application/json');
 
 // Variabile che cattura il valore di "genre" passato in $_GET
-$genreQuery = $_GET['genre'];
+// $genreQuery = $_GET['genre'];
 
 
 
 
 // Se il valore in $_GET non è vuoto chiamo la funziona che filtra per genere
-if(!empty($genreQuery)){
-  $disks = filterByGenre($disks, $genreQuery);
+if(!empty($_GET['genre'])){
+  if(array_key_exists('genre', $_GET)){
+    $disks = filterByGenre($disks, $_GET['genre']);
+    checkGet( $_GET['genre']);
+  }
+
 }
 
-checkGet( $genreQuery);
+
 // Qua trasformo l'array in json e poi lo stampo
   $json = json_encode($disks);
   echo $json;

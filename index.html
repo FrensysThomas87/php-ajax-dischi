@@ -19,7 +19,7 @@
             <select class="" name="" v-model="select" @change="selectByGenre()">
               <option value="">ALL</option>
               <option v-for="element in genres" >{{element}}</option>
-              <option>Pippo</option>
+              <option>Pippo</option> <!--Per gestire il caso in cui mandi un qualcosa che non esoiste-->
             </select>
           </div>
         </header>

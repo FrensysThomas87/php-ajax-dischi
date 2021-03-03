@@ -9,7 +9,7 @@ function filterByGenre($originalArray, $genere){
   $filtered = [];
 
   foreach ($originalArray as $album) {
-    if($album['genre'] === $genere  ){
+    if($album['genre'] === $genere){
       $filtered[] = $album;
     }
   }
