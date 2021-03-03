@@ -33,6 +33,15 @@ body {
   position: absolute;
   left: 0;
 }
+.container header .header-container select {
+  width: 200px;
+  top: 30px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  background-color: #1ED760;
+  text-align: center;
+}
 .container .album-container {
   display: flex;
   flex-wrap: wrap;
