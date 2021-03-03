@@ -15,3 +15,20 @@ function filterByGenre($originalArray, $genere){
   }
   return $filtered;
 }
+
+
+function checkGet($genre){
+
+    if((array_key_exists('genre', $_GET)) && $genre === "Pippo"){
+      http_response_code(400);
+    }
+
+}
+
+// function checkGet($suorceArray, $genre){
+//   foreach ($suorceArray as  $album) {
+//     if(array_key_exists('genre', $_GET) && $genre !== $album['genre']   && $genre !== ""){
+//         http_response_code(400);
+//      }
+//   }
+// }

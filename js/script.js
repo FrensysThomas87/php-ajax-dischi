@@ -20,23 +20,26 @@ new Vue({
    },
 
    selectByGenre:function(){
-     const self = this;
-     axios.get('http://localhost/php-ajax-dischi/app/server.php', {
-       params:{
-         genre: this.select,
-       },
-     })
-     .then(function(resp){
-       self.dischi = resp.data;
 
-     })
-     .catch(function (error) {
-       if(self.select === 'Pippo'){
-         self.badRequest = true;
-       }
-      console.log(error);
-    })
-   }
+       const self = this;
+       this.badRequest = false;
+       axios.get('http://localhost/php-ajax-dischi/app/server.php', {
+         params:{
+           genre: this.select,
+         },
+       })
+       .then(function(resp){
+         self.dischi = resp.data;
+
+
+       })
+        .catch(function (error) {
+          self.dischi = [];
+          self.badRequest = true;
+          console.log(error);
+  })
+
+     }
  },
 
  mounted(){
@@ -44,7 +47,6 @@ new Vue({
    axios.get('http://localhost/php-ajax-dischi/app/server.php')
    .then(function(resp){
      self.dischi = resp.data;
-
 
    })
  }

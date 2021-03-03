@@ -10,7 +10,7 @@
   <body>
 
     <div id="app">
-      <strong v-if="badRequest === true">Bad request 400!!!!</strong>
+
       <div class="container">
         <!-- header -->
         <header @mouseOver="fillByGenre()">
@@ -27,10 +27,12 @@
 
         <!-- albums -->
         <div class="album-container">
+          <strong id="bad-request" v-if="badRequest === true">{{select}} non esiste!!!!</strong>
           <div v-for="element in dischi" class="albums">
              <div class="album-cover-container">
                <img :src="element.cover" alt="">
              </div>
+
              <h1>{{element.title}}</h1>
              <h2>{{element.author}}</h2>
              <h3>{{element.year}}</h3>

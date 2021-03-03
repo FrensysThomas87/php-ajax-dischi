@@ -12,6 +12,17 @@ body{
   background-color:$bodyColor;
   min-width: $pageMinWidth;
   margin: 0;
+
+
+}
+
+#bad-request{
+  color: red;
+  position: absolute;
+  font-size: 80px;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 

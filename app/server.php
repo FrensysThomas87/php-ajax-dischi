@@ -11,11 +11,13 @@ $genreQuery = $_GET['genre'];
 
 
 
+
 // Se il valore in $_GET non è vuoto chiamo la funziona che filtra per genere
 if(!empty($genreQuery)){
   $disks = filterByGenre($disks, $genreQuery);
 }
 
+checkGet( $genreQuery);
 // Qua trasformo l'array in json e poi lo stampo
   $json = json_encode($disks);
   echo $json;
