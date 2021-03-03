@@ -10,10 +10,10 @@ $genreQuery = $_GET['genre'];
 function filterByGenre($originalArray, $genere){
   $filtered = [];
   foreach ($originalArray as $album) {
-    if( $genere === $album['genre'] ){
+    if($album['genre'] === $genere  ){
       $filtered[] = $album['genre'];
     }
-    var_dump($filtered);
+
     return $filtered;
   }
 
@@ -22,6 +22,7 @@ function filterByGenre($originalArray, $genere){
 
 if(!empty($genreQuery)){
   $disks = filterByGenre($disks, $genreQuery);
+
 }else{
   $json = json_encode($disks);
   echo $json;

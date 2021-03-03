@@ -15,9 +15,9 @@
         <header @mouseOver="fillByGenre()">
           <div class="header-container">
             <img src="img/spotify.jpg" alt="">
-            <select class="" name="" v-model="select">
+            <select class="" name="" v-model="select" @change="selectByGenre()">
               <option value="">ALL</option>
-              <option v-for="element in genres" @click="selectByGenre()">{{element}}</option>
+              <option v-for="element in genres" >{{element}}</option>
             </select>
           </div>
         </header>

@@ -23,6 +23,7 @@ new Vue({
      axios.get('http://localhost/php-ajax-dischi/app/server.php?genre=' + this.select)
      .then(function(resp){
        self.dischi = resp.data;
+       console.log(self.dischi);
      })
    }
  },
@@ -32,7 +33,7 @@ new Vue({
    axios.get('http://localhost/php-ajax-dischi/app/server.php')
    .then(function(resp){
      self.dischi = resp.data;
-     console.log(self.dischi);
+     
 
    })
  }
