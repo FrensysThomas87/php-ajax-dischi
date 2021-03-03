@@ -10,6 +10,7 @@
   <body>
 
     <div id="app">
+      <strong v-if="badRequest === true">Bad request 400!!!!</strong>
       <div class="container">
         <!-- header -->
         <header @mouseOver="fillByGenre()">
@@ -18,6 +19,7 @@
             <select class="" name="" v-model="select" @change="selectByGenre()">
               <option value="">ALL</option>
               <option v-for="element in genres" >{{element}}</option>
+              <option>Pippo</option>
             </select>
           </div>
         </header>

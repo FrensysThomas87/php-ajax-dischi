@@ -6,6 +6,7 @@ new Vue({
    genres:[],
    select:'',
    filtered:[],
+   badRequest: false,
 
  },
 
@@ -27,8 +28,14 @@ new Vue({
      })
      .then(function(resp){
        self.dischi = resp.data;
-       console.log(self.dischi);
+
      })
+     .catch(function (error) {
+       if(self.select === 'Pippo'){
+         self.badRequest = true;
+       }
+      console.log(error);
+    })
    }
  },
 
