@@ -80,7 +80,7 @@ $disks = [
     'author' => 'Bruce Springsteen',
     'year' => '1975',
     'cover' => 'img/bruce.jpg',
-    'genre' => ''
+    'genre' => 'Rock'
   ]
 ];
 

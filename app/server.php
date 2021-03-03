@@ -5,14 +5,24 @@
 header('Content-Type: application/json');
 
 
+$genreQuery = $_GET['genre'];
 
-foreach ($disks as $value) {
-  if(array_key_exists('genre', $_GET) && !empty($_GET['genre'])){
-    $json = json_encode($disk['genre']);
-    echo $json;
-  }else{
-    $json = json_encode($disks);
-    echo $json;
+function filterByGenre($originalArray, $genere){
+  $filtered = [];
+  foreach ($originalArray as $album) {
+    if( $genere === $album['genre'] ){
+      $filtered[] = $album['genre'];
+    }
+    var_dump($filtered);
+    return $filtered;
   }
 
+}
+
+
+if(!empty($genreQuery)){
+  $disks = filterByGenre($disks, $genreQuery);
+}else{
+  $json = json_encode($disks);
+  echo $json;
 }

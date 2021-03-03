@@ -20,19 +20,16 @@ new Vue({
 
    selectByGenre:function(){
      const self = this;
-     axios.get('http://localhost/php-ajax-dischi/app/server.php?')
+     axios.get('http://localhost/php-ajax-dischi/app/server.php?genre=' + this.select)
      .then(function(resp){
-       self.dischi.filter((element)=>{
-         return element.genre === self.select;
-
-       })
+       self.dischi = resp.data;
      })
    }
  },
 
  mounted(){
    const self = this;
-   axios.get('http://localhost/php-ajax-dischi/app/server.php)
+   axios.get('http://localhost/php-ajax-dischi/app/server.php')
    .then(function(resp){
      self.dischi = resp.data;
      console.log(self.dischi);
