@@ -9,6 +9,8 @@ header('Content-Type: application/json');
 // Variabile che cattura il valore di "genre" passato in $_GET
 $genreQuery = $_GET['genre'];
 
+
+
 // Se il valore in $_GET non è vuoto chiamo la funziona che filtra per genere
 if(!empty($genreQuery)){
   $disks = filterByGenre($disks, $genreQuery);

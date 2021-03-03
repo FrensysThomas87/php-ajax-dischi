@@ -20,7 +20,11 @@ new Vue({
 
    selectByGenre:function(){
      const self = this;
-     axios.get('http://localhost/php-ajax-dischi/app/server.php?genre=' + this.select)
+     axios.get('http://localhost/php-ajax-dischi/app/server.php', {
+       params:{
+         genre: this.select,
+       },
+     })
      .then(function(resp){
        self.dischi = resp.data;
        console.log(self.dischi);
